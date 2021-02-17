@@ -1,0 +1,12 @@
+default: # default connection
+  type: "sqljs"
+  location: "./test.rld"
+  autoSave: true
+  useLocalForage: true
+  entities: ["src/models/*.ts", "src/models/**/*.ts"]
+  logging: true
+  synchronize: false
+  migrations: ["src/migrations/*.ts"]
+  cli: 
+    entitiesDir: "src/models"
+    migrationsDir: "src/migrations"
